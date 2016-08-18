@@ -18,7 +18,7 @@ public class Assignment3 {
 		int point1 = RandomValues();
 
 		if (point1 == 7) {
-			System.out.println("Winner");
+			System.out.printf("Your point is %d, congratulations you win!", point1);
 		} else if (point1 == 2 || point1 == 3 || point1 == 12) {
 
 			System.out.printf("Your point is %d, sorry you lose!", point1);
@@ -30,11 +30,11 @@ public class Assignment3 {
 			while  (true) {
 
 				if (point2 == point1) {
-					System.out.println("Winner");
+					System.out.printf("Your point is %d, congratulations you win!", point2);
 					break;
 				}
 				if (point2 == 7) {
-					System.out.println("Loser");
+					System.out.printf("Your point is %d, sorry you lose!", point2);
 					break;
 				}
 				// while (point2 != point1 || point2 !=7) {
