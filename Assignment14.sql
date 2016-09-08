@@ -39,7 +39,7 @@ INSERT instructor VALUES (90,'Larry','Seger',11,1);
 INSERT instructor VALUES (100,'Kathy','Miller',21,1);
 
 
--- create class table
+-- create class table --
 create table class (
   id int not null primary key auto_increment,
   class_nbr int,
