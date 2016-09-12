@@ -1,0 +1,27 @@
+.italictext {
+	font-style: italic;
+}
+span {
+	color:red;
+}
+table, td {
+	 border:1px solid grey;
+	 align-self: center;
+	 text-align: center;
+}
+div {
+	width:49%;
+	display: inline-block;
+}
+h4 {
+	color: blue;
+}
+h5 {
+	text-align: center;
+	color: grey;
+	font-style: italic;
+}
+img {
+	width: 100px;
+	height: 100px;
+}
