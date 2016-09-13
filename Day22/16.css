@@ -1,0 +1,41 @@
+.italictext {
+	font-style: italic;
+}
+span {
+	color:red;
+}
+table, td {
+	 border:2px solid grey;
+	 align-self: center;
+	 text-align: center;
+}
+div {
+	width:49%;
+	display: inline-block;
+	/*border:2px solid red;*/
+/*	background-color: grey;
+*/	opacity: 1;
+}
+h4 {
+	color: blue;
+}
+h5 {
+	text-align: center;
+	color: silver;
+	background-color: black;
+	font-style: italic;
+}
+img {
+	width: 100px;
+	height: 100px;
+}
+body {
+    background-image: url("tiy.gif");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-attachment:fixed;
+    background-size:cover;
+}
+p {
+	color:orange;
+}
