@@ -2,7 +2,7 @@ package org.ssa.assignment;
 
 public class Student {
 
-	public String firstName;
+	public String firstName = "NONAME";
 	public int id;
 	public String lastName;
 	public double gpa;
@@ -102,7 +102,15 @@ public class Student {
 		this.majorId = majorId;
 	}
 
-	
+	@Override
+	public String toString() {
+		String msg = String.format("%3d %-20s %4.2f %4d",
+				this.id,
+				this.firstName + " " + this.lastName,
+				this.gpa,
+				this.sat);
+		return msg;
+	}
 	
 
 }

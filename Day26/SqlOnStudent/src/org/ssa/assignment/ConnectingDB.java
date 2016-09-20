@@ -4,10 +4,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.*;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Properties;
 
@@ -39,6 +35,7 @@ public class ConnectingDB {
 				myRs.close();
 		}
 	
+		// Get all students method
 		public static ArrayList<Student> getAllStudents() throws SQLException{
 			ArrayList<Student> studentList = new ArrayList<>();
 			try{
@@ -59,44 +56,100 @@ public class ConnectingDB {
 					student.setMajorId(myRs.getInt("major_id"));
 					studentList.add(student);
 				}
-					
-				
 			}catch(Exception ex){
 				ex.printStackTrace();
 			}finally{
 				close();
 			}
-			
 			return studentList;
 		}
 	
+		// Get student by selecting id
+		public static Student getStudentById(int id) throws SQLException{
+			Student student = null;
+			try{
+				//create a student object
+				student = new Student();
+				makeConnection();
+				myStmt= myConn.prepareStatement("select * from student where id = ?");
+				myStmt.setInt(1, id);
+				
+				myRs = myStmt.executeQuery();
+				while(myRs.next()){
+					student.setId(myRs.getInt("id"));
+					student.setFirstName(myRs.getString("first_name"));
+					student.setLastName(myRs.getString("last_name"));
+					student.setSat(myRs.getInt("sat"));
+					student.setGpa(myRs.getDouble("gpa"));
+					student.setMajorId(myRs.getInt("major_id"));
+				}
+			}catch(Exception ex){
+				ex.printStackTrace();
+			}finally{
+				//close();
+			}
+		return student;
+		}
 		
-//		public static Student getStudentById(int){
-//			try{
-//				
-//				Student student = new Student();
-//				makeConnection();
-//				stmt= myConn.prepareStatement();
-//			
-//				myRs=stmt.executeQuery("select * from student where id = 100");
-//			
+		
+		// Insert Method
+		public static Student insertStudent(int id, String first_name, String last_name, int sat, double gpa, int major_id) throws SQLException{
+			Student student = null;
+			try{
+				//create a student object
+				student = new Student();
+				makeConnection();
+				myStmt= myConn.prepareStatement("insert into student values (?,?,?,?,?,?)");
+				myStmt.setInt(1, id);
+				myStmt.setString(2, first_name);
+				myStmt.setString(3, last_name);
+				myStmt.setInt(4, sat);
+				myStmt.setDouble(5, gpa);
+				myStmt.setNull(6, Types.INTEGER);
+				
+				myStmt.executeUpdate();
 //				while(myRs.next()){
-//					
 //					student.setId(myRs.getInt("id"));
 //					student.setFirstName(myRs.getString("first_name"));
 //					student.setLastName(myRs.getString("last_name"));
 //					student.setSat(myRs.getInt("sat"));
 //					student.setGpa(myRs.getDouble("gpa"));
 //					student.setMajorId(myRs.getInt("major_id"));
-//					studentList.add(student);
 //				}
-//					
-//			}catch(Exception ex){
-//				ex.printStackTrace();
-//			}finally{
-//				close();
-//			}
-//	
-//			return null;
-//}
+			}catch(Exception ex){
+				ex.printStackTrace();
+			}finally{
+				close();
+			}
+		return student;
+		}
+		
+		
+		// Delete Method
+				public static Student deleteStudent(int id) throws SQLException{
+					Student student = null;
+					try{
+						//create a student object
+						student = new Student();
+						makeConnection();
+						myStmt= myConn.prepareStatement("delete from student where id = ?");
+						myStmt.setInt(1, id);
+
+						
+						myStmt.executeUpdate();
+//						while(myRs.next()){
+//							student.setId(myRs.getInt("id"));
+//							student.setFirstName(myRs.getString("first_name"));
+//							student.setLastName(myRs.getString("last_name"));
+//							student.setSat(myRs.getInt("sat"));
+//							student.setGpa(myRs.getDouble("gpa"));
+//							student.setMajorId(myRs.getInt("major_id"));
+//						}
+					}catch(Exception ex){
+						ex.printStackTrace();
+					}finally{
+						close();
+					}
+				return student;
+				}
 }
