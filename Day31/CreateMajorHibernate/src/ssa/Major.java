@@ -21,8 +21,8 @@ public class Major {
 	@Column(name="description")
 	private String description;
 	
-	@Column(name="score")
-	private int score;
+	@Column(name="req_sat")
+	private int req_sat;
 	
 	
 	public Major(){}
@@ -31,13 +31,13 @@ public class Major {
 	/**
 	 * @param id
 	 * @param description
-	 * @param score
+	 * @param req_sat
 	 */
-	public Major(int id, String description, int score) {
+	public Major(int id, String description, int req_sat) {
 		super();
 		this.id = id;
 		this.description = description;
-		this.score = score;
+		this.req_sat = req_sat;
 	}
 
 
@@ -74,18 +74,18 @@ public class Major {
 
 
 	/**
-	 * @return the score
+	 * @return the req_sat
 	 */
-	public int getScore() {
-		return score;
+	public int getReq_sat() {
+		return req_sat;
 	}
 
 
 	/**
-	 * @param score the score to set
+	 * @param req_sat the req_sat to set
 	 */
-	public void setScore(int score) {
-		this.score = score;
+	public void setReq_sat(int req_sat) {
+		this.req_sat = req_sat;
 	}
 
 
@@ -94,7 +94,7 @@ public class Major {
 	 */
 	@Override
 	public String toString() {
-		return "Major [id=" + id + ", description=" + description + ", score=" + score + "]";
+		return "Major [id=" + id + ", description=" + description + ", req_sat=" + req_sat + "]";
 	}
 	
 	

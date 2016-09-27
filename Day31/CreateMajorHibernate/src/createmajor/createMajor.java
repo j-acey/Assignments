@@ -80,7 +80,7 @@ public class createMajor {
 //		//New Code for Updating Data
 
 		session.beginTransaction();
-		session.createQuery("update Major set score = 1100 where id < 4 ").executeUpdate();
+		session.createQuery("update Major set req_sat = 1100 where id < 4 ").executeUpdate();
 		System.out.println();
 		System.out.println("Records have been updated");
 		session.getTransaction().commit();
@@ -138,14 +138,14 @@ public class createMajor {
 		// begin transaction
 		session.beginTransaction();
 		
-		List<Major> majors = session.createQuery("from Major").list();
+		List<Major> majors = (List<Major>) session.createQuery("from Major").list();
 		
 		//display student
 		System.out.println();
 		System.out.println("Below are details for each major currently available");
 		System.out.println();
-		System.out.println("ID    Description                Score");
-		System.out.println("======================================");
+		System.out.println("ID    Description                Req_SAT");
+		System.out.println("========================================");
 		display(majors);
 //		int id = majors.get("id");
 //		String description = majors.;
@@ -171,7 +171,7 @@ public class createMajor {
 	public static void display(List<Major> majors) {
 		for(Major major: majors){
 			//System.out.println(major.toString());
-		String msg= String.format("%-5d %-20s %10d", major.getId(), major.getDescription(), major.getScore());
+		String msg= String.format("%-5d %-20s %10d", major.getId(), major.getDescription(), major.getReq_sat());
 		System.out.println(msg);
 		}
 	}
