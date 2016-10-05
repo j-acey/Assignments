@@ -1,0 +1,17 @@
+<div>
+	<h1>Students</h1>
+	<table class="table">
+		<thead>
+			<tr><td>Student ID</td><td>Name</td><td>SAT</td><td>GPA</td><td>Major ID</td></tr>
+		</thead>
+		<tbody>
+		<tr ng-repeat="student in ctrl.students">
+			<td ng-bind="student.id"></td>
+			<td ng-bind="student.first_name + ' ' + student.last_name"></td>
+			<td ng-bind="student.sat"></td>
+			<td ng-bind="student.gpa"></td>
+			<td ng-bind="student.major_id"></td>
+		</tr>
+		</tbody>
+	</table>
+</div>
