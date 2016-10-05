@@ -1,0 +1,59 @@
+# SSA Final projects
+This is some information about the final project.
+
+## The goal
+The goal of your final project is to create a work using your knowledge and the technology we covered in class and to demonstrate that work for your management team at demo day. 
+
+Each team will create a poster board to represent the team and the work they'll be demonstrating. The team has quite a bit of flexibility as to what they put on their poster and how it is arranged. It should include something about the team members and the application.
+
+Each team will create a presentation (i.e. like PowerPoint) and deliver it to the managers answering any questions they have  before demonstrating the application. This presentation would be a good time to introduce the members of the team and the roles they played on the team.
+
+In terms of the technology, it must include:
+
+- Java (Server code)
+- Maven (Configuration management)
+- Spring (Server code framework)
+- Web services (JSON)
+- SQL (Database)
+- HTML (Web layout)
+- CSS (Web styling)
+- Javascript (Web programming)
+- jQuery (Web programming)
+- Angular (Web programming)
+
+## The teams
+```
+RED       YELLOW      ORANGE      GREEN       BLUE
+========= =========== =========== =========== ==========
+Joe       Arun        Stephen R.  Kyle        Li
+Joshua    Kevin       Daniel      Reuben      Peter
+Gabriel   Michael S.  Dax         Stephen E.  Michael C.
+Evan      Karen       Aisha       Jarrett     Jonathan
+                                              Shaquil
+```
+
+## Requirements
+Each team is required to manage their features in an organized manner so that the status of the project can be reviewed at any time. 
+
+It starts by listing the potential features that will be considered for inclusion into the application. Any member of the team can suggest a feature. It should include a short description of what the feature does and a guess of how many hours it would take to complete the coding and testing. When all the features have been created, the team must prioritize each feature as MANDATORY or OPTIONAL. In addition, it is good practice to prioritize features within the mandatory and optional categories so that higher priority items are worked on first.
+
+- **Mandatory** means that the application cannot do without this feature.
+- **Optional** means that this feature will be included if there is enough time after the mandatory features are done.
+
+Once all the feature are identified as mandatory or optional and prioritized, they are placed on a (virtual) board in one of four columns:
+
+1. Features - those waiting to be done
+2. In Progress - features being worked on
+3. Done - coding and testing have been completed
+4. Deployed - feature has been integrated into the application
+
+The team is responsible for keeping the (virtual) board up to date by moving the features between the columns to show the status of the feature.
+
+If the team chooses to use a virtual board for this, there is a web application at [Trello.com] (https://trello.com/#) that ou can use.
+
+## Some thoughts about team dynamics
+Team dynamics is about how teams operate together effectively. The following are thoughts about team dynamics but not intended to be absolute dictates on how your team should operate. The team decides that.
+
+I suggest that the first thing the team does is meet and decide the roles for each team member. Is there a single leader for the team or will the team make all decisions by consensus? The major components of the project are the back-end Java, Spring, Web Server, and SQL versus the front-end Angular, jQuery, Bootstrap, Javascript, and CSS. Will some of the team focus on the back-end and some focus on the front-end? Will some be responsible for testing? How will the team determine whether a particular feature is ready to go into the application? In short, the duties and the decision making of the team must be decided.
+
+The team should decide how often they will meet as a team and discuss logistics. Because the timeframe is very limited, teams are encouraged to keep the meetings as brief and to the point as possible.
